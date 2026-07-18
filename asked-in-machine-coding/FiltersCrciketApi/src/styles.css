@@ -1,0 +1,10 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.active {
+  background-color: green;
+  color: white;
+  paddding: 5px;
+}
