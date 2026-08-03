@@ -297,3 +297,15 @@ document.getElementById("search").addEventListener("input", (e) => {
     console.log(e.target.value);
   }, 1000);
 });
+
+// remove duplicate values
+
+const products=[
+  {id:1,category:'beauty'},
+  {id:2,category:'beauty'},
+  {id:3,category:'furniture'}
+]
+const filteredPrd= [...new Set(products.map((product)=>(
+  product.category
+)))]
+console.log((filteredPrd))
