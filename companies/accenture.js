@@ -104,3 +104,24 @@ if(myName){ // Line 2
 }
 
 // Same name + same scope = ❌ not allowed.SyntaxError: Identifier 'myName' has already been declared
+
+
+
+/// Final Round
+const initialState = {
+  users: [
+    { id: 1, name: "John", active: true },
+    { id: 2, name: "Mary", active: false },
+    { id: 3, name: "David", active: true }
+  ],
+  loading: false,
+  error: null
+};
+
+// what causes unnecessary re render
+
+const result = data.map(async item => {
+  return await processItem(item);
+});
+
+// issue which return value

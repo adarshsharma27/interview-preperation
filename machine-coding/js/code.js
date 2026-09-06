@@ -309,3 +309,28 @@ const filteredPrd= [...new Set(products.map((product)=>(
   product.category
 )))]
 console.log((filteredPrd))
+
+
+// find repleated charcters and dipley like this
+// i/p-aabbb  o/p-a2b3
+
+function findDuplicateAndFormat(string) {
+  const object = {}
+  let formatttedString = "";
+  for (const char of string) {
+    if (object[char]) {
+      object[char]++
+    }
+    else {
+      object[char] = 1
+    }
+
+  }
+  for (const char in object) {
+    console.log(char, object[char])
+    formatttedString = formatttedString + char + object[char]
+  }
+  return formatttedString
+}
+
+console.log(findDuplicateAndFormat('aabbb'))
