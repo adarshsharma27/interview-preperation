@@ -334,3 +334,66 @@ function findDuplicateAndFormat(string) {
 }
 
 console.log(findDuplicateAndFormat('aabbb'))
+
+
+
+// find string length  without length method
+
+function findStringLength(string) {
+  let count = 0;
+  for (let char of string) {
+    if (char == " ") {
+      throw new Error("please provide proper string");
+    }
+    else count++
+  }
+  return count
+
+}
+console.log(findStringLength('adarshsharma'))
+console.log(findStringLength('   '))
+
+
+// count words in the string
+
+function countWords(string) {
+  const wordsArray = string.trim().split(/\s+/)
+  console.log(wordsArray)
+  return wordsArray.length
+
+}
+
+console.log(countWords(' I   Love  Coding '))
+
+// find the largest the  word in the string
+
+function findLargestWord(string) {
+  const wordsArray = string.trim().split(/\s+/);
+  let largestWord = "";
+  for (let char of wordsArray) {
+    if (char.length >= largestWord.length) {
+      largestWord = char
+    }
+  }
+  return largestWord;
+
+}
+
+console.log(findLargestWord(' I  Love  Cricket '))
+
+// compare two string are using same charcter or not
+
+function compareStringEqual(string1, string2) {
+  if (string1.length !== string2.length) {
+    return "String are not equal"
+  }
+  const sortedString1 = string1.split('').sort((a, b) => a.localeCompare(b)).join('')
+  const sortedString2 = string2.split('').sort((a, b) => a.localeCompare(b)).join('')
+  if (sortedString1 === sortedString2) {
+    return "Strings are equal"
+  }
+  else return "Strings are not equal"
+}
+
+console.log(compareStringEqual('adarsh', 'adarsh'))
+console.log(compareStringEqual('adarsh', 'sharma'))
