@@ -397,3 +397,26 @@ function compareStringEqual(string1, string2) {
 
 console.log(compareStringEqual('adarsh', 'adarsh'))
 console.log(compareStringEqual('adarsh', 'sharma'))
+
+
+
+
+// compare two array are equal or not order matter
+// [1,2,3]===[1,2,3]
+// [3,2,1]!=[1,2,3]
+
+function compareArrays(array1, array2) {
+  if (array1.length != array2.length) return "arrays are not equal"
+  for (i = 0; i <= array1.length; i++) {
+    if (array1[i] !== array2[i]) return "arrays are not  equal"
+  }
+  return "arrays are not equal"
+}
+
+console.log(compareArrays([1, 2, 3], [3, 2, 1]))
+console.log(compareArrays([1, 2, 3], [1, 2, 3]))
+
+
+
+// find first non repeating character in string
+
